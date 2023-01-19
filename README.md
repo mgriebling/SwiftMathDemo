@@ -8,7 +8,7 @@ This same demo, although in Objective-C, is available from [iosMath](https://tra
 To use `SwiftMath` in your own code, just add the following package path to XCode: https://github.com/mgriebling/SwiftMath.git
 
 ## Examples
-Here are screenshots of an iPad, iPhone, and Mac(catalyst) running the demo:
+Here are screenshots of an iPad, iPhone, and Mac running the demo:
 
 ![iPad Screenshot](images/iPad.png)
 
