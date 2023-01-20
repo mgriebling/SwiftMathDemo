@@ -11,12 +11,12 @@
 		479B9A152979F0910029C406 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A142979F0910029C406 /* iPad.png */; };
 		479B9A182979F0C00029C406 /* iMac.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A172979F0C00029C406 /* iMac.png */; };
 		479B9A1A2979F3330029C406 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A192979F3330029C406 /* iPhone.png */; };
+		479B9A1D297AF13C0029C406 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 479B9A1C297AF13C0029C406 /* SwiftMath */; };
 		47D14F27297898C00072F28E /* SwiftMathDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D14F26297898C00072F28E /* SwiftMathDemoApp.swift */; };
 		47D14F29297898C00072F28E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D14F28297898C00072F28E /* ContentView.swift */; };
 		47D14F2B297898C10072F28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D14F2A297898C10072F28E /* Assets.xcassets */; };
 		47D14F2F297898C10072F28E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D14F2E297898C10072F28E /* Preview Assets.xcassets */; };
 		47D14F362978994D0072F28E /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D14F352978994D0072F28E /* MathView.swift */; };
-		47D14F3C297980EE0072F28E /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 47D14F3B297980EE0072F28E /* SwiftMath */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47D14F3C297980EE0072F28E /* SwiftMath in Frameworks */,
+				479B9A1D297AF13C0029C406 /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 			);
 			name = SwiftMathDemo;
 			packageProductDependencies = (
-				47D14F3B297980EE0072F28E /* SwiftMath */,
+				479B9A1C297AF13C0029C406 /* SwiftMath */,
 			);
 			productName = SwiftMathDemo;
 			productReference = 47D14F23297898C00072F28E /* SwiftMathDemo.app */;
@@ -143,7 +143,7 @@
 			);
 			mainGroup = 47D14F1A297898C00072F28E;
 			packageReferences = (
-				47D14F3A297980EE0072F28E /* XCRemoteSwiftPackageReference "SwiftMath" */,
+				479B9A1B297AF13C0029C406 /* XCRemoteSwiftPackageReference "SwiftMath" */,
 			);
 			productRefGroup = 47D14F24297898C00072F28E /* Products */;
 			projectDirPath = "";
@@ -393,20 +393,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		47D14F3A297980EE0072F28E /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+		479B9A1B297AF13C0029C406 /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mgriebling/SwiftMath.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		47D14F3B297980EE0072F28E /* SwiftMath */ = {
+		479B9A1C297AF13C0029C406 /* SwiftMath */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 47D14F3A297980EE0072F28E /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			package = 479B9A1B297AF13C0029C406 /* XCRemoteSwiftPackageReference "SwiftMath" */;
 			productName = SwiftMath;
 		};
 /* End XCSwiftPackageProductDependency section */
