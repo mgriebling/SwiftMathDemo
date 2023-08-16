@@ -54,7 +54,7 @@ struct ContentView: View {
                                "c\\alpha + d\\gamma & c\\beta + d \\delta " +
                                "\\end{pmatrix}",
         "\\frak Q(\\lambda,\\hat{\\lambda}) = " +
-                               "-\\frac{1}{2} \\mathbb P(O \\mid \\lambda ) \\sum_s \\sum_m \\sum_t \\gamma_m^{(s)} (t) +\\\\ " +
+                               "-\\frac{1}{2} \\mathbb P(O \\mid \\lambda ) \\sum_s \\sum_m \\sum_t \\gamma_m^{(s)} (t) + \\\\" +
                                "\\quad \\left( \\log(2 \\pi ) + \\log \\left| \\cal C_m^{(s)} \\right| + " +
                                "\\left( o_t - \\hat{\\mu}_m^{(s)} \\right) ^T \\cal C_m^{(s)-1} \\right) ",
         "f(x) = \\begin{cases}" +
@@ -87,7 +87,7 @@ struct ContentView: View {
             ("\\frac{x+\\frac{12}{5}}{y}+\\frac1z = \\frac{xz+y+\\frac{12}{5}z}{yz}", back, left, z, display, 30),
             ("\\frac{x+\\frac{12}{5}}{y}+\\frac1z = \\frac{xz+y+\\frac{12}{5}z}{yz} ", back, left, z, text, 30),
             ("\\frac{x^{2+3y}}{x^{2+4y}} = x^y \\times \\frac{z_1^{y+1}}{z_1^{y+1}}", bb, left, z, display, 40),
-            ("\\frac{x^{2+3y}}{x^{2+4y}} = x^y \\times \\frac{z_1^{y+1}}{z_1^{y+1}} ", bb, left, z, display, 20),
+            ("\\frac{x^{2+3y}}{x^{2+4y}} = x^y \\times \\frac{z_1^{y+1}}{z_1^{y+1}} ", bb, left, z, display, 30),
             ("5+\\sqrt{2}+3", bb, left, z, display, 30),
             ("\\sqrt{\\frac{\\sqrt{\\frac{1}{2}} + 3}{\\sqrt5^x}}+\\sqrt{3x}+x^{\\sqrt2}", bb, left, z, display, 30),
             ("\\sqrt[3]{24} + 3\\sqrt{2}24", bb, left, z, display, 30),

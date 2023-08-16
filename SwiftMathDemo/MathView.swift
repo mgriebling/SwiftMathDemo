@@ -50,7 +50,8 @@ struct MathView: NSViewRepresentable {
     func updateNSView(_ view: MTMathUILabel, context: Context) {
         view.latex = equation
         view.fontSize = fontSize
-        view.font = MTFontManager.manager!.termesFont(withSize: fontSize)
+        view.font = MTFontManager() /*.kpMathSansFont(withSize: fontSize)*/ .kpMathLightFont(withSize: fontSize)
+        // view.font = MTFontManager().termesFont(withSize: fontSize)
         view.textAlignment = textAlignment
         view.labelMode = labelMode
         view.textColor = MTColor(Color.primary)
