@@ -25,7 +25,7 @@ struct MathView: UIViewRepresentable {
     func updateUIView(_ uiView: MTMathUILabel, context: Context) {
         uiView.latex = equation
         uiView.fontSize = fontSize
-        uiView.font = MTFontManager.manager!.termesFont(withSize: fontSize)
+        uiView.font = MTFontManager.manager.termesFont(withSize: fontSize)
         uiView.textAlignment = textAlignment
         uiView.labelMode = labelMode
         uiView.textColor = MTColor(Color.primary)

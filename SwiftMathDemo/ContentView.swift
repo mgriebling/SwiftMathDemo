@@ -73,75 +73,95 @@ struct ContentView: View {
     let center = MTTextAlignment.center
     let bb = Color.clear
     
+    struct DemoText {
+        let s: String
+        let c: Color
+        let a: MTTextAlignment
+        let i: MTEdgeInsets
+        let m: MTMathUILabelMode
+        let w: CGFloat
+        let id = UUID()
+        
+        init(_ s: String, _ c: Color, _ a: MTTextAlignment, _ i: MTEdgeInsets, _ m: MTMathUILabelMode, _ w: CGFloat) {
+            self.s = s
+            self.c = c
+            self.a = a
+            self.i = i
+            self.m = m
+            self.w = w
+        }
+    }
+    
     
     // I know this looks stupid but SwiftUI crashes on larger numbers of lines
     // Really this data should be kept in a data store
-    func fancy() -> [(String, Color, MTTextAlignment, MTEdgeInsets, MTMathUILabelMode, CGFloat)] {
+    func fancy() -> [DemoText] {
         [
-            ("3+2-5 = 0", back, left, z, display, 30),
-            ("12+-3 > +14", back, center, z, display, 30),
-            ("(-3-5=-8, -6-7=-13)", bb, left, z, display, 30),
-            ("5\\times(-2 \\div 1) = -10", back, right, r20, display, 30),
-            ("-h - (5xy+2) = z", bb, left, z, display, 30),
-            ("\\frac12x + \\frac{3\\div4}2y = 25", bb, left, z, text, 30),
-            ("\\frac{x+\\frac{12}{5}}{y}+\\frac1z = \\frac{xz+y+\\frac{12}{5}z}{yz}", back, left, z, display, 30),
-            ("\\frac{x+\\frac{12}{5}}{y}+\\frac1z = \\frac{xz+y+\\frac{12}{5}z}{yz} ", back, left, z, text, 30),
-            ("\\frac{x^{2+3y}}{x^{2+4y}} = x^y \\times \\frac{z_1^{y+1}}{z_1^{y+1}}", bb, left, z, display, 40),
-            ("\\frac{x^{2+3y}}{x^{2+4y}} = x^y \\times \\frac{z_1^{y+1}}{z_1^{y+1}} ", bb, left, z, display, 30),
-            ("5+\\sqrt{2}+3", bb, left, z, display, 30),
-            ("\\sqrt{\\frac{\\sqrt{\\frac{1}{2}} + 3}{\\sqrt5^x}}+\\sqrt{3x}+x^{\\sqrt2}", bb, left, z, display, 30),
-            ("\\sqrt[3]{24} + 3\\sqrt{2}24", bb, left, z, display, 30),
-            ("\\sqrt[x+\\frac{3}{4}]{\\frac{2}{4}+1}", bb, left, z, display, 30),
-            ("\\sin^2(\\theta)=\\log_3^2(\\pi)", bb, left, z, display, 30),
-            ("\\lim_{x\\to\\infty}\\frac{e^2}{1-x}=\\limsup_{\\sigma}5", bb, left, z, display, 30),
-            ("\\sum_{n=1}^{\\infty}\\frac{1+n}{1-n}=\\bigcup_{A\\in\\Im}C\\cup B", bb, left, z, display, 30),
-            ("\\sum_{n=1}^{\\infty}\\frac{1+n}{1-n}=\\bigcup_{A\\in\\Im}C\\cup B ", bb, left, z, text, 30)
+            DemoText("3+2-5 = 0", back, left, z, display, 30),
+            DemoText("12+-3 > +14", back, center, z, display, 30),
+            DemoText("(-3-5=-8, -6-7=-13)", bb, left, z, display, 30),
+            DemoText("5\\times(-2 \\div 1) = -10", back, right, r20, display, 30),
+            DemoText("-h - (5xy+2) = z", bb, left, z, display, 30),
+            DemoText("\\frac12x + \\frac{3\\div4}2y = 25", bb, left, z, text, 30),
+            DemoText("\\frac{x+\\frac{12}{5}}{y}+\\frac1z = \\frac{xz+y+\\frac{12}{5}z}{yz}", back, left, z, display, 30),
+            DemoText("\\frac{x+\\frac{12}{5}}{y}+\\frac1z = \\frac{xz+y+\\frac{12}{5}z}{yz} ", back, left, z, text, 30),
+            DemoText("\\frac{x^{2+3y}}{x^{2+4y}} = x^y \\times \\frac{z_1^{y+1}}{z_1^{y+1}}", bb, left, z, display, 40),
+            DemoText("\\frac{x^{2+3y}}{x^{2+4y}} = x^y \\times \\frac{z_1^{y+1}}{z_1^{y+1}} ", bb, left, z, display, 30),
+            DemoText("5+\\sqrt{2}+3", bb, left, z, display, 30),
+            // FIXME: display mode is not working on Mac - largest radical is broken up
+            DemoText("\\sqrt{\\frac{\\sqrt{\\frac{1}{2}} + 3}{\\sqrt5^x}}+\\sqrt{3x}+x^{\\sqrt2}", bb, left, z, text, 30),
+            DemoText("\\sqrt[3]{24} + 3\\sqrt{2}24", bb, left, z, display, 30),
+            DemoText("\\sqrt[x+\\frac{3}{4}]{\\frac{2}{4}+1}", bb, left, z, display, 30),
+            DemoText("\\sin^2(\\theta)=\\log_3^2(\\pi)", bb, left, z, display, 30),
+            DemoText("\\lim_{x\\to\\infty}\\frac{e^2}{1-x}=\\limsup_{\\sigma}5", bb, left, z, display, 30),
+            DemoText("\\sum_{n=1}^{\\infty}\\frac{1+n}{1-n}=\\bigcup_{A\\in\\Im}C\\cup B", bb, left, z, display, 30),
+            DemoText("\\sum_{n=1}^{\\infty}\\frac{1+n}{1-n}=\\bigcup_{A\\in\\Im}C\\cup B ", bb, left, z, text, 30)
         ]
     }
     
-    func fancy2() -> [(String, Color, MTTextAlignment, MTEdgeInsets, MTMathUILabelMode, CGFloat)] {
+    func fancy2() -> [DemoText] {
         [
-            ("\\lim_{x\\to\\infty}\\frac{e^2}{1-x}=\\limsup_{\\sigma}6", bb, left, z, text, 30),
-            ("\\int_{0}^{\\infty}e^x \\,dx=\\oint_0^{\\Delta}5\\Gamma", bb, left, z, display, 30),
-            ("\\int\\int\\int^{\\infty}\\int_0\\int^{\\infty}_0\\int", bb, left, z, display, 30),
-            ("U_3^2UY_3^2U_3Y^2f_1f^2ff", bb, left, z, display, 30),
-            ("\\notacommand", bb, left, z, display, 30),
-            ("\\sqrt{1}", bb, left, z, display, 30),
-            ("\\sqrt[|]{1}", bb, left, z, display, 30),
-            ("{n \\choose k}", bb, left, z, display, 30),
-            ("{n \\choose k} ", bb, left, z, text, 30),
-            ("\\left({n \\atop k}\\right)", bb, left, z, display, 30),
-            ("\\left({n \\atop m}\\right) ", bb, left, z, text, 30),
-            ("\\underline{xyz}+\\overline{abc}", bb, left, z, text, 30),
-            ("\\underline{\\frac12}+\\overline{\\frac34}", bb, left, z, text, 30),
-            ("\\underline{x^\\overline{y}_\\overline{z}+5}", bb, left, z, text, 30),
-            ("\\int\\!\\!\\!\\int_D dx\\,dy", bb, left, z, text, 30),
-            ("\\int\\int_D dxdy", bb, left, z, text, 30),
-            ("y\\,dx-x\\,dy", bb, left, z, text, 30),
-            ("y dx - x dy",  bb, left, z, text, 30),
+            DemoText("\\lim_{x\\to\\infty}\\frac{e^2}{1-x}=\\limsup_{\\sigma}6", bb, left, z, text, 30),
+            DemoText("\\int_{0}^{\\infty}e^x \\,dx=\\oint_0^{\\Delta}5\\Gamma", bb, left, z, display, 30),
+            DemoText("\\int\\int\\int^{\\infty}\\int_0\\int^{\\infty}_0\\int", bb, left, z, display, 30),
+            DemoText("U_3^2UY_3^2U_3Y^2f_1f^2ff", bb, left, z, display, 30),
+            DemoText("\\notacommand", bb, left, z, display, 30),
+            DemoText("\\sqrt{1}", bb, left, z, display, 30),
+            DemoText("\\sqrt[|]{1}", bb, left, z, display, 30),
+            DemoText("{n \\choose k}", bb, left, z, display, 30),
+            DemoText("{n \\choose k} ", bb, left, z, text, 30),
+            DemoText("\\left({n \\atop k}\\right)", bb, left, z, display, 30),
+            DemoText("\\left({n \\atop m}\\right) ", bb, left, z, text, 30),
+            DemoText("\\underline{xyz}+\\overline{abc}", bb, left, z, text, 30),
+            DemoText("\\underline{\\frac12}+\\overline{\\frac34}", bb, left, z, text, 30),
+            DemoText("\\underline{x^\\overline{y}_\\overline{z}+5}", bb, left, z, text, 30),
+            DemoText("\\int\\!\\!\\!\\int_D dx\\,dy", bb, left, z, text, 30),
+            DemoText("\\int\\int_D dxdy", bb, left, z, text, 30),
+            DemoText("y\\,dx-x\\,dy", bb, left, z, text, 30),
+            DemoText("y dx - x dy",  bb, left, z, text, 30),
         ]
     }
     
-    func fancy3() -> [(String, Color, MTTextAlignment, MTEdgeInsets, MTMathUILabelMode, CGFloat)] {
+    func fancy3() -> [DemoText] {
         [
-            ("hello\\ from \\quad the \\qquad other\\ side", bb, left, z, display, 30),
-            ("\\vec x \\; \\hat y \\; \\breve {x^2} \\; \\tilde x \\tilde x^2 x^2 ", bb, left, z, display, 30),
-            ("\\hat{xyz} \\; \\widehat{xyz}\\; \\vec{2ab}", bb, left, z, display, 30),
-            ("\\colorbox{#f0f0e0}{\\sqrt{1+\\colorbox{#d0c0d0}{\\sqrt{1+\\colorbox{#a080c0}{\\sqrt{1+\\colorbox{#7050a0}{\\sqrt{1+\\colorbox{403060}{\\colorbox{#102000}{\\sqrt{1+\\cdots}}}}}}}}}}}", bb, left, z, display, 30),
-            ("\\begin{bmatrix} a & b\\\\ c & d \\\\ e & f \\\\ g &  h \\\\ i & j\\end{bmatrix}", bb, left, z, display, 30),
-            ("x{\\scriptstyle y}z", bb, left, z, display, 30),  // problem here
-            ("x \\mathrm x \\mathbf x \\mathcal X \\mathfrak x \\mathsf x \\bm x \\mathtt x \\mathit \\Lambda \\cal g", bb, left, z, display, 30),
-            ("\\mathrm{using\\ mathrm}" , bb, left, z, display, 30),
-            ("\\text{using text}", bb, left, z, text, 30),
-            ("\\text{Mary has }\\$500 + \\$200.", bb, left, z, display, 30),
-            ("\\colorbox{#888888}{\\begin{pmatrix} \\colorbox{#ff0000}{a} & \\colorbox{#00ff00}{b} \\\\ \\colorbox{#00aaff}{c} & \\colorbox{#f0f0f0}{d} \\end{pmatrix}}", bb, left, z, text, 30),
-            ("\\underline{xyz}+\\overline{abc}", bb, left, z, text, 30),
-            ("\\underline{\\frac12}+\\overline{\\frac34}", bb, left, z, text, 30),
-            ("\\underline{x^\\overline{y}_\\overline{z}+5}", bb, left, z, text, 30),
-            ("\\int\\!\\!\\!\\int_D dx\\,dy", bb, left, z, text, 30),
-            ("\\int\\int_D dxdy", bb, left, z, text, 30),
-            ("y\\,dx-x\\,dy", bb, left, z, text, 30),
-            ("y dx - x dy",  bb, left, z, text, 30),
+            DemoText("hello\\ from \\quad the \\qquad other\\ side", bb, left, z, display, 30),
+            DemoText("\\vec x \\; \\hat y \\; \\breve {x^2} \\; \\tilde x \\tilde x^2 x^2 ", bb, left, z, display, 30),
+            DemoText("\\hat{xyz} \\; \\widehat{xyz}\\; \\vec{2ab}", bb, left, z, display, 30),
+            DemoText("\\colorbox{#f0f0e0}{\\sqrt{1+\\colorbox{#d0c0d0}{\\sqrt{1+\\colorbox{#a080c0}{\\sqrt{1+\\colorbox{#7050a0}{\\sqrt{1+\\colorbox{403060}{\\colorbox{#102000}{\\sqrt{1+\\cdots}}}}}}}}}}}", bb, left, z, display, 30),
+            DemoText("\\begin{bmatrix} a & b\\\\ c & d \\\\ e & f \\\\ g &  h \\\\ i & j\\end{bmatrix}", bb, left, z, display, 30),
+            DemoText("x{\\scriptstyle y}z", bb, left, z, display, 30),  // problem here
+            DemoText("x \\mathrm x \\mathbf x \\mathcal X \\mathfrak x \\mathsf x \\bm x \\mathtt x \\mathit \\Lambda \\cal g", bb, left, z, display, 30),
+            DemoText("\\mathrm{using\\ mathrm}" , bb, left, z, display, 30),
+            DemoText("\\text{using text}", bb, left, z, text, 30),
+            DemoText("\\text{Mary has }\\$500 + \\$200.", bb, left, z, display, 30),
+            DemoText("\\colorbox{#888888}{\\begin{pmatrix} \\colorbox{#ff0000}{a} & \\colorbox{#00ff00}{b} \\\\ \\colorbox{#00aaff}{c} & \\colorbox{#f0f0f0}{d} \\end{pmatrix}}", bb, left, z, text, 30),
+            DemoText("\\underline{xyz}+\\overline{abc}", bb, left, z, text, 30),
+            DemoText("\\underline{\\frac12}+\\overline{\\frac34}", bb, left, z, text, 30),
+            DemoText("\\underline{x^\\overline{y}_\\overline{z}+5}", bb, left, z, text, 30),
+            DemoText("\\int\\!\\!\\!\\int_D dx\\,dy", bb, left, z, text, 30),
+            DemoText("\\int\\int_D dxdy", bb, left, z, text, 30),
+            DemoText("y\\,dx-x\\,dy", bb, left, z, text, 30),
+            DemoText("y dx - x dy",  bb, left, z, text, 30),
         ]
     }
 
@@ -151,9 +171,9 @@ struct ContentView: View {
                 ForEach(demoLabels, id: \.self) { label in
                     MathView(equation:label)
                 }
-                ForEach(fancy()+fancy2()+fancy3(), id: \.self.0) { label in
-                    MathView(equation: label.0, textAlignment: label.2, fontSize: label.5, labelMode: label.4, insets: label.3)
-                        .background(label.1)
+                ForEach(fancy()+fancy2()+fancy3(), id: \.self.id) { label in
+                    MathView(equation: label.s, textAlignment: label.a, fontSize: label.w, labelMode: label.m, insets: label.i)
+                        .background(label.c)
                 }
             }
         }

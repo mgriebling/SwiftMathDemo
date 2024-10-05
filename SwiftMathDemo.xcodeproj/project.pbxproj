@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4705289E2CB17CFD00018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 4705289D2CB17CFD00018B50 /* SwiftMath */; };
+		470528A72CB1934800018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528A62CB1934800018B50 /* SwiftMath */; };
+		470528AA2CB1938300018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528A92CB1938300018B50 /* SwiftMath */; };
+		470528AD2CB193F400018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528AC2CB193F400018B50 /* SwiftMath */; };
+		470528B02CB1944000018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528AF2CB1944000018B50 /* SwiftMath */; };
+		470528B62CB1A89A00018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528B52CB1A89A00018B50 /* SwiftMath */; };
+		470528B92CB1B01C00018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528B82CB1B01C00018B50 /* SwiftMath */; };
 		479B9A132979F0730029C406 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A122979F0730029C406 /* README.md */; };
 		479B9A152979F0910029C406 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A142979F0910029C406 /* iPad.png */; };
 		479B9A182979F0C00029C406 /* iMac.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A172979F0C00029C406 /* iMac.png */; };
 		479B9A1A2979F3330029C406 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A192979F3330029C406 /* iPhone.png */; };
-		47CBF96129A67C2000CF964A /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 47CBF96029A67C2000CF964A /* SwiftMath */; };
 		47D14F27297898C00072F28E /* SwiftMathDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D14F26297898C00072F28E /* SwiftMathDemoApp.swift */; };
 		47D14F29297898C00072F28E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D14F28297898C00072F28E /* ContentView.swift */; };
 		47D14F2B297898C10072F28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D14F2A297898C10072F28E /* Assets.xcassets */; };
@@ -38,7 +44,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CBF96129A67C2000CF964A /* SwiftMath in Frameworks */,
+				470528AD2CB193F400018B50 /* SwiftMath in Frameworks */,
+				470528A72CB1934800018B50 /* SwiftMath in Frameworks */,
+				470528B62CB1A89A00018B50 /* SwiftMath in Frameworks */,
+				470528B02CB1944000018B50 /* SwiftMath in Frameworks */,
+				4705289E2CB17CFD00018B50 /* SwiftMath in Frameworks */,
+				470528AA2CB1938300018B50 /* SwiftMath in Frameworks */,
+				470528B92CB1B01C00018B50 /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +124,13 @@
 			);
 			name = SwiftMathDemo;
 			packageProductDependencies = (
-				47CBF96029A67C2000CF964A /* SwiftMath */,
+				4705289D2CB17CFD00018B50 /* SwiftMath */,
+				470528A62CB1934800018B50 /* SwiftMath */,
+				470528A92CB1938300018B50 /* SwiftMath */,
+				470528AC2CB193F400018B50 /* SwiftMath */,
+				470528AF2CB1944000018B50 /* SwiftMath */,
+				470528B52CB1A89A00018B50 /* SwiftMath */,
+				470528B82CB1B01C00018B50 /* SwiftMath */,
 			);
 			productName = SwiftMathDemo;
 			productReference = 47D14F23297898C00072F28E /* SwiftMathDemo.app */;
@@ -126,7 +144,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					47D14F22297898C00072F28E = {
 						CreatedOnToolsVersion = 14.2;
@@ -143,7 +161,7 @@
 			);
 			mainGroup = 47D14F1A297898C00072F28E;
 			packageReferences = (
-				47CBF95F29A67C2000CF964A /* XCRemoteSwiftPackageReference "SwiftMath" */,
+				470528B72CB1B01C00018B50 /* XCRemoteSwiftPackageReference "SwiftMath" */,
 			);
 			productRefGroup = 47D14F24297898C00072F28E /* Products */;
 			projectDirPath = "";
@@ -217,9 +235,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -275,9 +295,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -301,6 +323,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftMathDemo/SwiftMathDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftMathDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 6389FT2N69;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -316,10 +339,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.SwiftMathDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +362,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftMathDemo/SwiftMathDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftMathDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 6389FT2N69;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -354,10 +378,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.SwiftMathDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -393,20 +417,44 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		47CBF95F29A67C2000CF964A /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+		470528B72CB1B01C00018B50 /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mgriebling/SwiftMath.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		47CBF96029A67C2000CF964A /* SwiftMath */ = {
+		4705289D2CB17CFD00018B50 /* SwiftMath */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 47CBF95F29A67C2000CF964A /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+		470528A62CB1934800018B50 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		470528A92CB1938300018B50 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		470528AC2CB193F400018B50 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		470528AF2CB1944000018B50 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		470528B52CB1A89A00018B50 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		470528B82CB1B01C00018B50 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 470528B72CB1B01C00018B50 /* XCRemoteSwiftPackageReference "SwiftMath" */;
 			productName = SwiftMath;
 		};
 /* End XCSwiftPackageProductDependency section */
