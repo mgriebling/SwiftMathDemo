@@ -9,14 +9,14 @@ To use `SwiftMath` in your own code, just add the following package path to XCod
 ## Examples
 Here are screenshots of an iPad, iPhone, and Mac running the demo:
 
-![iPad Screenshot](images/lightiPad#gh-light-mode-only)
-![iPad Screenshot](images/darkiPad#gh-dark-mode-only)
+![iPad Screenshot](images/lightiPad.png#gh-light-mode-only)
+![iPad Screenshot](images/darkiPad.jpeg#gh-dark-mode-only)
 
-![iPhone Screenshot](images/darkiPhone#gh-dark-mode-only)
-![iPhone Screenshot](images/lightiPhone#gh-light-mode-only)
+![iPhone Screenshot](images/darkiPhone.png#gh-dark-mode-only)
+![iPhone Screenshot](images/lightiPhone.jpeg#gh-light-mode-only)
 
-![Quadratic Formula](images/darkiMac#gh-dark-mode-only)
-![Quadratic Formula](images/lightiMac#gh-light-mode-only)
+![Quadratic Formula](images/darkiMac.png#gh-dark-mode-only)
+![Quadratic Formula](images/lightiMac.png#gh-light-mode-only)
 
 
 
