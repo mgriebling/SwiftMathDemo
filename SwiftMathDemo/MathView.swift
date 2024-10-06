@@ -14,7 +14,7 @@ struct MathView: UIViewRepresentable {
     var equation: String
     var background: Color = .clear
     var textAlignment: MTTextAlignment = .center
-    var fontSize: CGFloat = 30
+    var fontSize: CGFloat = 20
     var labelMode: MTMathUILabelMode = .text
     var insets: MTEdgeInsets = MTEdgeInsets()
     
@@ -50,8 +50,7 @@ struct MathView: NSViewRepresentable {
     func updateNSView(_ view: MTMathUILabel, context: Context) {
         view.latex = equation
         view.fontSize = fontSize
-        view.font = MTFontManager() /*.kpMathSansFont(withSize: fontSize)*/ .kpMathLightFont(withSize: fontSize)
-        // view.font = MTFontManager().termesFont(withSize: fontSize)
+        view.font = MTFontManager().termesFont(withSize: fontSize)
         view.textAlignment = textAlignment
         view.labelMode = labelMode
         view.textColor = MTColor(Color.primary)

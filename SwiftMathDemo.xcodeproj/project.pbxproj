@@ -14,10 +14,12 @@
 		470528B02CB1944000018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528AF2CB1944000018B50 /* SwiftMath */; };
 		470528B62CB1A89A00018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528B52CB1A89A00018B50 /* SwiftMath */; };
 		470528B92CB1B01C00018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528B82CB1B01C00018B50 /* SwiftMath */; };
+		470528BC2CB2DD6400018B50 /* darkiMac.png in Resources */ = {isa = PBXBuildFile; fileRef = 470528BA2CB2DD6400018B50 /* darkiMac.png */; };
+		470528BD2CB2DD6400018B50 /* lightiMac.png in Resources */ = {isa = PBXBuildFile; fileRef = 470528BB2CB2DD6400018B50 /* lightiMac.png */; };
+		470528BF2CB2E07B00018B50 /* darkiPad.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 470528BE2CB2E07B00018B50 /* darkiPad.jpeg */; };
 		479B9A132979F0730029C406 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A122979F0730029C406 /* README.md */; };
-		479B9A152979F0910029C406 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A142979F0910029C406 /* iPad.png */; };
-		479B9A182979F0C00029C406 /* iMac.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A172979F0C00029C406 /* iMac.png */; };
-		479B9A1A2979F3330029C406 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A192979F3330029C406 /* iPhone.png */; };
+		479B9A152979F0910029C406 /* lightiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A142979F0910029C406 /* lightiPad.png */; };
+		479B9A1A2979F3330029C406 /* darkiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A192979F3330029C406 /* darkiPhone.png */; };
 		47D14F27297898C00072F28E /* SwiftMathDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D14F26297898C00072F28E /* SwiftMathDemoApp.swift */; };
 		47D14F29297898C00072F28E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D14F28297898C00072F28E /* ContentView.swift */; };
 		47D14F2B297898C10072F28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D14F2A297898C10072F28E /* Assets.xcassets */; };
@@ -26,10 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		470528BA2CB2DD6400018B50 /* darkiMac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkiMac.png; sourceTree = "<group>"; };
+		470528BB2CB2DD6400018B50 /* lightiMac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightiMac.png; sourceTree = "<group>"; };
+		470528BE2CB2E07B00018B50 /* darkiPad.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darkiPad.jpeg; sourceTree = "<group>"; };
+		470528C22CB2E2BF00018B50 /* lightiPhone.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightiPhone.jpeg; sourceTree = "<group>"; };
 		479B9A122979F0730029C406 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		479B9A142979F0910029C406 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
-		479B9A172979F0C00029C406 /* iMac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMac.png; sourceTree = "<group>"; };
-		479B9A192979F3330029C406 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		479B9A142979F0910029C406 /* lightiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightiPad.png; sourceTree = "<group>"; };
+		479B9A192979F3330029C406 /* darkiPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkiPhone.png; sourceTree = "<group>"; };
 		47D14F23297898C00072F28E /* SwiftMathDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMathDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D14F26297898C00072F28E /* SwiftMathDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMathDemoApp.swift; sourceTree = "<group>"; };
 		47D14F28297898C00072F28E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,9 +65,12 @@
 		479B9A162979F09D0029C406 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				479B9A192979F3330029C406 /* iPhone.png */,
-				479B9A172979F0C00029C406 /* iMac.png */,
-				479B9A142979F0910029C406 /* iPad.png */,
+				479B9A192979F3330029C406 /* darkiPhone.png */,
+				470528BA2CB2DD6400018B50 /* darkiMac.png */,
+				470528BE2CB2E07B00018B50 /* darkiPad.jpeg */,
+				470528BB2CB2DD6400018B50 /* lightiMac.png */,
+				470528C22CB2E2BF00018B50 /* lightiPhone.jpeg */,
+				479B9A142979F0910029C406 /* lightiPad.png */,
 			);
 			name = images;
 			path = ../images;
@@ -178,9 +186,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				479B9A132979F0730029C406 /* README.md in Resources */,
-				479B9A182979F0C00029C406 /* iMac.png in Resources */,
-				479B9A1A2979F3330029C406 /* iPhone.png in Resources */,
-				479B9A152979F0910029C406 /* iPad.png in Resources */,
+				470528BF2CB2E07B00018B50 /* darkiPad.jpeg in Resources */,
+				479B9A1A2979F3330029C406 /* darkiPhone.png in Resources */,
+				479B9A152979F0910029C406 /* lightiPad.png in Resources */,
+				470528BC2CB2DD6400018B50 /* darkiMac.png in Resources */,
+				470528BD2CB2DD6400018B50 /* lightiMac.png in Resources */,
 				47D14F2F297898C10072F28E /* Preview Assets.xcassets in Resources */,
 				47D14F2B297898C10072F28E /* Assets.xcassets in Resources */,
 			);
