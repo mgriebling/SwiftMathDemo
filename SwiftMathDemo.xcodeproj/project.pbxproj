@@ -13,10 +13,12 @@
 		470528AD2CB193F400018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528AC2CB193F400018B50 /* SwiftMath */; };
 		470528B02CB1944000018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528AF2CB1944000018B50 /* SwiftMath */; };
 		470528B62CB1A89A00018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528B52CB1A89A00018B50 /* SwiftMath */; };
-		470528B92CB1B01C00018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528B82CB1B01C00018B50 /* SwiftMath */; };
 		470528BC2CB2DD6400018B50 /* darkiMac.png in Resources */ = {isa = PBXBuildFile; fileRef = 470528BA2CB2DD6400018B50 /* darkiMac.png */; };
 		470528BD2CB2DD6400018B50 /* lightiMac.png in Resources */ = {isa = PBXBuildFile; fileRef = 470528BB2CB2DD6400018B50 /* lightiMac.png */; };
 		470528BF2CB2E07B00018B50 /* darkiPad.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 470528BE2CB2E07B00018B50 /* darkiPad.jpeg */; };
+		470528C52CB33AA300018B50 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 470528C42CB33AA300018B50 /* SwiftMath */; };
+		475A6BEB2CB5B87A0087735E /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 475A6BEA2CB5B87A0087735E /* SwiftMath */; };
+		475A6BF02CB5F98B0087735E /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 475A6BEF2CB5F98B0087735E /* SwiftMath */; };
 		479B9A132979F0730029C406 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A122979F0730029C406 /* README.md */; };
 		479B9A152979F0910029C406 /* lightiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A142979F0910029C406 /* lightiPad.png */; };
 		479B9A1A2979F3330029C406 /* darkiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B9A192979F3330029C406 /* darkiPhone.png */; };
@@ -49,13 +51,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475A6BEB2CB5B87A0087735E /* SwiftMath in Frameworks */,
 				470528AD2CB193F400018B50 /* SwiftMath in Frameworks */,
 				470528A72CB1934800018B50 /* SwiftMath in Frameworks */,
 				470528B62CB1A89A00018B50 /* SwiftMath in Frameworks */,
 				470528B02CB1944000018B50 /* SwiftMath in Frameworks */,
 				4705289E2CB17CFD00018B50 /* SwiftMath in Frameworks */,
 				470528AA2CB1938300018B50 /* SwiftMath in Frameworks */,
-				470528B92CB1B01C00018B50 /* SwiftMath in Frameworks */,
+				470528C52CB33AA300018B50 /* SwiftMath in Frameworks */,
+				475A6BF02CB5F98B0087735E /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +142,9 @@
 				470528AC2CB193F400018B50 /* SwiftMath */,
 				470528AF2CB1944000018B50 /* SwiftMath */,
 				470528B52CB1A89A00018B50 /* SwiftMath */,
-				470528B82CB1B01C00018B50 /* SwiftMath */,
+				470528C42CB33AA300018B50 /* SwiftMath */,
+				475A6BEA2CB5B87A0087735E /* SwiftMath */,
+				475A6BEF2CB5F98B0087735E /* SwiftMath */,
 			);
 			productName = SwiftMathDemo;
 			productReference = 47D14F23297898C00072F28E /* SwiftMathDemo.app */;
@@ -169,7 +175,7 @@
 			);
 			mainGroup = 47D14F1A297898C00072F28E;
 			packageReferences = (
-				470528B72CB1B01C00018B50 /* XCRemoteSwiftPackageReference "SwiftMath" */,
+				475A6BEE2CB5F98B0087735E /* XCRemoteSwiftPackageReference "SwiftMath" */,
 			);
 			productRefGroup = 47D14F24297898C00072F28E /* Products */;
 			projectDirPath = "";
@@ -427,12 +433,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		470528B72CB1B01C00018B50 /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+		475A6BEE2CB5F98B0087735E /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mgriebling/SwiftMath.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
+				minimumVersion = 1.5.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -462,9 +468,17 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftMath;
 		};
-		470528B82CB1B01C00018B50 /* SwiftMath */ = {
+		470528C42CB33AA300018B50 /* SwiftMath */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 470528B72CB1B01C00018B50 /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+		475A6BEA2CB5B87A0087735E /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		475A6BEF2CB5F98B0087735E /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 475A6BEE2CB5F98B0087735E /* XCRemoteSwiftPackageReference "SwiftMath" */;
 			productName = SwiftMath;
 		};
 /* End XCSwiftPackageProductDependency section */

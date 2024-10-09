@@ -9,6 +9,10 @@ import SwiftUI
 import SwiftMath
 
 struct ContentView: View {
+    
+    /// Set to *true* to preview the fonts
+    let previewFonts = false
+    
     let demoLabels = [
         "\\text{Quadratic roots: }x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}",
         "\\color{#ff3399}{(a_1+a_2)^2}=a_1^2+2a_1a_2+a_2^2",
@@ -172,15 +176,43 @@ struct ContentView: View {
             DemoText("y dx - x dy", bb, left, z, text),
         ]
     }
+    
+    let chars =
+     """
+    \\text{ABCDEFGHIJKLMOPQRSTUVWXYZ} \\\\
+    \\text{abcdefghijklmnopqrstuvwxyz 0123456789} \\\\
+    \\text{<>?.,+-[]\\{\\}|=\\_()*\\%\\$!@\\#}
+    """
 
     var body: some View {
         ScrollView([.vertical,.horizontal]) {
             VStack {
+                if previewFonts {
+                    // Display fonts
+                    ForEach(MathFont.allCases) { id in
+                        VStack(alignment: .leading) {
+                            Text("Font: **\(id.rawValue)**").font(.title3)
+                            MathView(equation: chars, font:id,
+                                     textAlignment: .left, fontSize: 15)
+                            .padding(.bottom, 10)
+                        }
+                    }
+                }
+                
+                // Change this to view a different font
+                // Note:
+                // Asana has problems with large braces
+                // Euler has problems with large radicals and determants
+                // kpMathLightFont has problems with large radicals and braces
+                // kpMathSansFont has problems with large radicals and braces
+                let font = MathFont.latinModernFont
+                
+                // Display example equations
                 ForEach(demoLabels, id: \.self) { label in
-                    MathView(equation:label)
+                    MathView(equation:label, font: font)
                 }
                 ForEach(fancy()) { label in
-                    MathView(equation: label.s, textAlignment: label.a, fontSize: label.w, labelMode: label.m, insets: label.i)
+                    MathView(equation: label.s, font: font, textAlignment: label.a, fontSize: label.w, labelMode: label.m, insets: label.i)
                         .background(label.c)
                 }
             }

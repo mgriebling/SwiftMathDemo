@@ -10,11 +10,10 @@ import SwiftMath
 
 #if os(iOS)
 struct MathView: UIViewRepresentable {
-
     var equation: String
-    var background: Color = .clear
+    var font: MathFont = .latinModernFont
     var textAlignment: MTTextAlignment = .center
-    var fontSize: CGFloat = 20
+    var fontSize: CGFloat = 30
     var labelMode: MTMathUILabelMode = .text
     var insets: MTEdgeInsets = MTEdgeInsets()
     
@@ -22,21 +21,19 @@ struct MathView: UIViewRepresentable {
         let view = MTMathUILabel()
         return view
     }
-    func updateUIView(_ uiView: MTMathUILabel, context: Context) {
-        uiView.latex = equation
-        uiView.fontSize = fontSize
-        uiView.font = MTFontManager.manager.termesFont(withSize: fontSize)
-        uiView.textAlignment = textAlignment
-        uiView.labelMode = labelMode
-        uiView.textColor = MTColor(Color.primary)
-        uiView.contentInsets = insets
+    func updateUIView(_ view: MTMathUILabel, context: Context) {
+        view.latex = equation
+        view.font = MTFontManager().font(withName: font.rawValue, size: fontSize)
+        view.textAlignment = textAlignment
+        view.labelMode = labelMode
+        view.textColor = MTColor(Color.primary)
+        view.contentInsets = insets
     }
 }
 #else
 struct MathView: NSViewRepresentable {
-    
     var equation: String
-    var background: Color = .clear
+    var font: MathFont = .latinModernFont
     var textAlignment: MTTextAlignment = .center
     var fontSize: CGFloat = 30
     var labelMode: MTMathUILabelMode = .text
@@ -49,8 +46,7 @@ struct MathView: NSViewRepresentable {
     
     func updateNSView(_ view: MTMathUILabel, context: Context) {
         view.latex = equation
-        view.fontSize = fontSize
-        view.font = MTFontManager().termesFont(withSize: fontSize)
+        view.font = MTFontManager().font(withName: font.rawValue, size: fontSize)
         view.textAlignment = textAlignment
         view.labelMode = labelMode
         view.textColor = MTColor(Color.primary)
