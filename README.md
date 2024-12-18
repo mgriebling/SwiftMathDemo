@@ -12,10 +12,10 @@ XCode: https://github.com/mgriebling/SwiftMath.git
 Here are screenshots of an iPad, iPhone, and Mac running the demo:
 
 ![iPad Screenshot](images/lightiPad.png#gh-light-mode-only)
-![iPad Screenshot](images/darkiPad.jpeg#gh-dark-mode-only)
+![iPad Screenshot](images/darkiPad.png#gh-dark-mode-only)
 
 ![iPhone Screenshot](images/darkiPhone.png#gh-dark-mode-only)
-![iPhone Screenshot](images/lightiPhone.jpeg#gh-light-mode-only)
+![iPhone Screenshot](images/lightiPhone.png#gh-light-mode-only)
 
 ![Quadratic Formula](images/darkiMac.png#gh-dark-mode-only)
 ![Quadratic Formula](images/lightiMac.png#gh-light-mode-only)

@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mgriebling/SwiftMath.git",
       "state" : {
-        "revision" : "7799485428a3988c4104c4e366541f7725ced4e3",
-        "version" : "1.6.0"
+        "branch" : "main",
+        "revision" : "1708b07bc977cb88826358478506220d680b78a3"
       }
     }
   ],
