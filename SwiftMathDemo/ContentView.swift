@@ -14,7 +14,7 @@ struct ContentView: View {
     let previewFonts = false
     
     let demoLabels = [
-	//	"\\vec{AB}", 
+		"x_i\\in[-1{,}5;1,5]",
 		"\\text{Accented characters: áéíóúýàèìòùâêîôûäëïöüÿãñõ}",
 		"\\text{Special: çøåæœß'ÇØÅÆŒ}",
 		"\\text{Uppercase: ÁÉÍÓÚÝÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÃÑÕ}",

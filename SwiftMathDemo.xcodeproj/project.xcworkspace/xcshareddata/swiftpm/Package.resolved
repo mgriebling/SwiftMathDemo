@@ -1,13 +1,13 @@
 {
-  "originHash" : "c8fb98d929174d77bada3cb68a4b0bc0eec20c0303fd34bcc3ca10880b925912",
+  "originHash" : "29f526ddf21aff91e22b71258249b75b0a71df40a56c1f318f84c93fe3a90425",
   "pins" : [
     {
       "identity" : "swiftmath",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mgriebling/SwiftMath.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "1708b07bc977cb88826358478506220d680b78a3"
+        "revision" : "5c251ad21812f4d129dd8a2886723e5eabfc6054",
+        "version" : "1.7.0"
       }
     }
   ],
