@@ -14,7 +14,7 @@ struct ContentView: View {
     let previewFonts = false
     
     let demoLabels = [
-		"x_i\\in[-1{,}5;1,5]",
+		"x_i\\in[-1{,\\!}5;1,5]",
 		"\\text{Accented characters: áéíóúýàèìòùâêîôûäëïöüÿãñõ}",
 		"\\text{Special: çøåæœß'ÇØÅÆŒ}",
 		"\\text{Uppercase: ÁÉÍÓÚÝÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÃÑÕ}",
@@ -22,10 +22,8 @@ struct ContentView: View {
         "\\text{Quadratic roots: }x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}",
         "\\color{#ff3399}{(a_1+a_2)^2}=a_1^2+2a_1a_2+a_2^2",
         "\\cos(\\theta + \\varphi) = \\cos(\\theta)\\cos(\\varphi) - \\sin(\\theta)\\sin(\\varphi)",
-        """
-        \\frac{1}{\\left(\\sqrt{\\phi \\sqrt{5}}-\\phi\\right) e^{\\frac25 \\pi}} 
-            = 1+\\frac{e^{-2\\piā} {1 +\\frac{e^{-4\\pi}} {1+\\frac{e^{-6\\pi}} {1+\\frac{e^{-8\\pi}} {1+\\cdots} } } }
-        """,
+		"\\frac{1}{\\left(\\sqrt{\\phi \\sqrt{5}}-\\phi\\right) e^{\\frac25 \\pi}} = " +
+				"1+\\frac{e^{-2\\pi}}{1 +\\frac{e^{-4\\pi}}{1+\\frac{e^{-6\\pi}}{1+\\frac{e^{-8\\pi}} {1+\\cdots}}}}",
         "\\sigma = \\sqrt{\\frac{1}{N}\\sum_{i=1}^N (x_i - \\mu)^2}",
         "\\neg(P\\land Q) \\iff (\\neg P)\\lor(\\neg Q)",
         "\\log_b(x) = \\frac{\\log_a(x)}{\\log_a(b)}",
